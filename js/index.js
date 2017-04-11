@@ -10,9 +10,9 @@ var threeStudy = function(){
 	//新建一个3D基础：场景，相机，渲染器
 	self.baseInit = function(){
 		self.scene = new THREE.Scene();
-		self.camera = new THREE.PerspectiveCamera( 45, 2/1, 0.1, 1000);
+		self.camera = new THREE.PerspectiveCamera( 45, $(window).width()/$(window).height(), 0.1, 1000);
 		self.renderer = new THREE.WebGLRenderer();
-		self.renderer.setSize( 1000, 500 );														//场景大小
+		self.renderer.setSize($(window).width(), $(window).height() );														//场景大小
 		self.renderer.setClearColor(0xeeeeee,1.0);												//场景颜色
 		self.renderer.shadowMap.enabled = true;		
 
